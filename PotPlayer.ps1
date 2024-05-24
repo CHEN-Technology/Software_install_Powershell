@@ -1,5 +1,15 @@
+Write-Host "PotPlayer下载中ing"
 $URL = "https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe"
-$OUTPUT_FILE = "Potplayer.exe"
+$OUTPUT_FILE = "./downloads/Potplayer.exe"
+
+# 检查文件夹是否存在
+if (!(Test-Path "downloads")) {
+    Write-Host "文件夹不存在，开始创建"
+    # 创建文件夹
+    New-Item -ItemType Directory -Path "downloads" | Out-Null
+}else{
+    Write-Host "文件夹存在"
+}
 
 # 检查文件是否存在
 if (!(Test-Path $OUTPUT_FILE)) {
@@ -22,7 +32,7 @@ if (!(Test-Path $OUTPUT_FILE)) {
         # 启动可执行文件
         Start-Process $OUTPUT_FILE
     } else {
-        Write-Host "文件不存在或损坏，重新下载"
+        Write-Host "文件损坏，重新下载"
         # 删除现有文件
         Remove-Item $OUTPUT_FILE
         # 重新下载文件
