@@ -1,5 +1,5 @@
 Write-Host "火绒下载中ing"
-$URL = "https://down-tencent.huorong.cn/sysdiag-all-x64-6.0.0.29-2024.05.22.1.exe"
+$URL = "http://www.huorong.cn/product/downloadHr60.php?pro=hr60&plat=x64UrlAll"
 $OUTPUT_FILE = "./downloads/火绒.exe"
 
 # 检查文件夹是否存在
