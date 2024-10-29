@@ -6,7 +6,7 @@
 
 ## 编写语言
 
-[![Language](https://skillicons.dev/icons?i=powershell)](https://github.com/CHEN-Technology)
+[![Language](https://skillicons.dev/icons?i=powershell)](https://github.com/CHEN-Technology/Software_install_Powershell)
 
 ## 使用方法
 
